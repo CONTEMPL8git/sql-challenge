@@ -78,6 +78,4 @@ ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_title_id" FOREIGN KEY("title_id")
 REFERENCES "employees" ("emp_title_id");
 
 
---DROP TABLE "employees"
 
---DROP TABLE "departments"

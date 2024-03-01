@@ -31,8 +31,8 @@ CREATE TABLE "dept_manager" (
 );
 
 CREATE TABLE "employees" (
-    "emp_no" int   NOT NULL,
-    "emp_title_id" varchar   NOT NULL,
+    "emp_no" int   NOT NULL UNIQUE, 
+    "emp_title_id" varchar   NOT NULL, 
     "birth_date" date   NOT NULL,
     "first_name" varchar(20)   NOT NULL,
     "last_name" varchar(20)   NOT NULL,
@@ -76,4 +76,3 @@ REFERENCES "salaries" ("emp_no");
 
 ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_title_id" FOREIGN KEY("title_id")
 REFERENCES "employees" ("emp_title_id");
-
